@@ -29,7 +29,7 @@ public:
   boolean logAct;
 
   StateMachine();
-  void caso(String,void(fc)(void));
+  void stateCase(String,void(fc)(void));
   void changeState(String _est);
 };
 #endif

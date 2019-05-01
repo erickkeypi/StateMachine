@@ -1,0 +1,4 @@
+StateMachine	KEYWORD1
+logAct	KEYWORD2
+stateCase	KEYWORD2
+changeState	KEYWORD2

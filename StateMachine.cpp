@@ -22,7 +22,7 @@ StateMachine::StateMachine(){
   logAct = false;
 }
 
-void StateMachine::caso(String nombre,void(fc)(void)){
+void StateMachine::stateCase(String nombre,void(fc)(void)){
   if (estado == nombre){
     fc();
   }
@@ -31,6 +31,6 @@ void StateMachine::caso(String nombre,void(fc)(void)){
 void StateMachine::changeState(String _est){
   estado = _est;
   if(logAct){
-    Serial.println("Cambiando estado a: " + estado);
+    Serial.println("Changing state to: " + estado);
   }
 }
