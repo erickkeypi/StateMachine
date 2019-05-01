@@ -1,5 +1,5 @@
 # TimeEvent
-Libreria arduino para ejecutar eventos de tiempo
+Libreria arduino para para simular una maquina de estados finitos
 
 ## License
 Copyright (c) 2019 Erick R Garcia Martinez.
