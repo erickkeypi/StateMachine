@@ -1,4 +1,4 @@
-# StateMAchine
+# StateMachine
 Libreria arduino para para simular una maquina de estados finitos
 
 ## License
