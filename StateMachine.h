@@ -31,5 +31,6 @@ public:
   StateMachine();
   void stateCase(String,void(fc)(void));
   void changeState(String _est);
+  String getState();
 };
 #endif

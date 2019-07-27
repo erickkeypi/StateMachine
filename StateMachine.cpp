@@ -28,6 +28,11 @@ void StateMachine::stateCase(String nombre,void(fc)(void)){
   }
 }
 
+String StateMachine::getState(){
+  return estado;
+}
+
+
 void StateMachine::changeState(String _est){
   estado = _est;
   if(logAct){
