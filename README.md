@@ -27,6 +27,8 @@ Se debe crear una función para cada caso.
 
 Para cambiar de un caso a otro se debe llamar la función `changeState()` y pasandole como parametro el caso al que se quiere cambiar.
 
+Para obtener el estado actual se utiliza la función `getState()` la cual retorna un String con el estado actual.
+
 ## Funciones
 ```StateMachine()```
 Constructor de la clase.
@@ -36,6 +38,9 @@ Esta función hace que cambie el caso que se esta ejecutando.
 
 ```void stateCase("caso",funcion)```
 Esta función agrega cada uno de los casos y ejecuta la funcion correspondiente del caso activado.
+
+```String getState()```
+Esta función retorna el estado actual
 
 ## License
 Copyright (c) 2019 Erick R Garcia Martinez.
