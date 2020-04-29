@@ -18,6 +18,7 @@ limitations under the License.
 #include "StateMachine.h"
 
 StateMachine::StateMachine(){
+  estado.reserve(20);
   estado = "default";
   logAct = false;
 }
