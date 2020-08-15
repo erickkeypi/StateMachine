@@ -18,25 +18,27 @@ limitations under the License.
 #include "StateMachine.h"
 
 StateMachine::StateMachine(){
-  estado.reserve(20);
-  estado = "default";
+  for (int i=0;i<20;i++){
+    estado[i]=0;
+  }
+  strcpy(estado,"default");
   logAct = false;
 }
 
-void StateMachine::stateCase(String nombre,void(fc)(void)){
-  if (estado == nombre){
+char *StateMachine::getState(){
+  return estado;
+}
+
+void StateMachine::stateCase(char nombre[],void(fc)(void)){
+  if (strcmp(estado,nombre) == 0){
     fc();
   }
 }
 
-String StateMachine::getState(){
-  return estado;
-}
-
-
-void StateMachine::changeState(String _est){
-  estado = _est;
+void StateMachine::changeState(char _est[]){
+  strcpy(estado,_est);
   if(logAct){
-    Serial.println("Changing state to: " + estado);
+    Serial.print(F("Changing state to: "));
+    Serial.println(estado);
   }
 }
