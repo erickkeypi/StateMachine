@@ -23,14 +23,15 @@ limitations under the License.
 class StateMachine{
 
 private:
-  String estado;
+  char estado[20];
 
 public:
   boolean logAct;
 
   StateMachine();
-  void stateCase(String,void(fc)(void));
-  void changeState(String _est);
-  String getState();
+  char *getState();
+  void stateCase(char[],void(fc)(void));
+  void changeState(char[]);
+
 };
 #endif

@@ -1,6 +1,6 @@
 #include "StateMachine.h"
 
-#define LED 13
+#define LED LED_BUILTIN
 
 StateMachine machine = StateMachine();
 

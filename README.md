@@ -39,7 +39,7 @@ Esta función hace que cambie el caso que se esta ejecutando.
 ```void stateCase("caso",funcion)```
 Esta función agrega cada uno de los casos y ejecuta la funcion correspondiente del caso activado.
 
-```String getState()```
+```char *getState()```
 Esta función retorna el estado actual
 
 ## License
