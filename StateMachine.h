@@ -23,15 +23,17 @@ limitations under the License.
 class StateMachine{
 
 private:
-  char estado[20];
+  // char estado[20];
+  int internalState;
 
 public:
   boolean logAct;
 
   StateMachine();
-  char *getState();
-  void stateCase(char[],void(fc)(void));
-  void changeState(char[]);
+  int getState();
+  void stateCase(int,void(fc)(void));
+  void changeState(int);
+  void changeCondition(bool,int);
 
 };
 #endif
