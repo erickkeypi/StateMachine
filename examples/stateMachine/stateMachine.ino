@@ -1,6 +1,9 @@
 #include "StateMachine.h"
 
 #define LED LED_BUILTIN
+#define STATE_FIRST 0
+#define STATE_SECOND 1
+#define STATE_THIRD 2
 
 StateMachine machine = StateMachine();
 
@@ -9,13 +12,13 @@ int count = 0;
 
 void setup(){
   pinMode(LED,OUTPUT);
-  machine.changeState("firstState");
+  machine.changeState(STATE_FIRST);
 }
 
 void loop(){
-  machine.stateCase("firstState",fs);
-  machine.stateCase("secondState",ss);
-  machine.stateCase("thirdState",ts);
+  machine.stateCase(STATE_FIRST,fs);
+  machine.stateCase(STATE_SECOND,ss);
+  machine.stateCase(STATE_THIRD,ts);
 }
 
 void fs(){
@@ -26,7 +29,7 @@ void fs(){
   }
   if(count >= 5){
     count =0;
-    machine.changeState("secondState");
+    machine.changeState(STATE_SECOND);
   }
 }
 
@@ -38,7 +41,7 @@ void ss(){
   }
   if(count >= 10){
     count =0;
-    machine.changeState("thirdState");
+    machine.changeState(STATE_THIRD);
   }
 }
 
@@ -50,6 +53,6 @@ void ts(){
   }
   if(count >= 100){
     count =0;
-    machine.changeState("firstState");
+    machine.changeState(STATE_FIRST);
   }
 }

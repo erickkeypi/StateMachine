@@ -18,12 +18,7 @@ limitations under the License.
 #include "StateMachine.h"
 
 StateMachine::StateMachine(){
-  // for (int i=0;i<20;i++){
-  //   estado[i]=0;
-  // }
-  // strcpy(estado,"default");
   internalState = 0;
-  logAct = false;
 }
 
 int StateMachine::getState(){
@@ -38,10 +33,6 @@ void StateMachine::stateCase(int _state,void(fc)(void)){
 
 void StateMachine::changeState(int _est){
   internalState = _est;
-  if(logAct){
-    Serial.print(F("Changing state to: "));
-    Serial.println(internalState);
-  }
 }
 
 void StateMachine::changeCondition(bool _cond,int _state){

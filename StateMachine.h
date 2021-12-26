@@ -23,12 +23,9 @@ limitations under the License.
 class StateMachine{
 
 private:
-  // char estado[20];
   int internalState;
 
 public:
-  boolean logAct;
-
   StateMachine();
   int getState();
   void stateCase(int,void(fc)(void));
